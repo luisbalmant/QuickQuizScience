@@ -40,12 +40,12 @@ public class MainActivity extends AppCompatActivity {
 
         score.setText("Score: " + mScore);
 
-        updateQuestion (r.nextInt(mQuestionsLenght));
+        updateQuestion(r.nextInt(mQuestionsLenght));
 
         answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (answer1.getText() == mAnswer){
+                if (answer1.getText() == mAnswer) {
                     mScore++;
                     score.setText("Score: " + mScore);
                     updateQuestion(r.nextInt(mQuestionsLenght));
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         answer2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (answer2.getText() == mAnswer){
+                if (answer2.getText() == mAnswer) {
                     mScore++;
                     score.setText("Score: " + mScore);
                     updateQuestion(r.nextInt(mQuestionsLenght));
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         answer3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (answer3.getText() == mAnswer){
+                if (answer3.getText() == mAnswer) {
                     mScore++;
                     score.setText("Score: " + mScore);
                     updateQuestion(r.nextInt(mQuestionsLenght));
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void updateQuestion(int num){
+    private void updateQuestion(int num) {
 
         question.setText(mQuestions.getQuestion(num));
 
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         mAnswer = mQuestions.getCorrectAnswer(num);
     }
 
-    private void gameOver(){
+    private void gameOver() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
         alertDialogBuilder
 
